@@ -32,7 +32,9 @@ def clear():
     display.config(text="")
 
 def equals():
-    pass
+    global input
+    display.config(text=eval(input))
+    input=""
 
 buttons=[[0 for x in range(5)]for y in range(4)]
 for i in range(4):
@@ -42,7 +44,7 @@ for i in range(4):
         buttons[i][j].place(x=10+i*78, y=400-(j+1)*60)
 
 buttons[0][4].config(command=clear)
-buttons[3][4].config(command=equals)
+buttons[3][0].config(command=equals)
 
 buttons[0][0].config(command=lambda: clicked("0"))
 buttons[1][0].config(command=lambda: clicked("."))
@@ -65,7 +67,7 @@ buttons[3][3].config(command=lambda: clicked("*"))
 
 buttons[1][4].config(command=lambda: clicked("("))
 buttons[2][4].config(command=lambda: clicked(")"))
-buttons[3][4].config(command=lambda: clicked("%"))
+buttons[3][4].config(command=lambda: clicked("/"))
 
 
 window.mainloop()
