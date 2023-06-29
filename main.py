@@ -33,8 +33,11 @@ def clear():
 
 def equals():
     global input
-    display.config(text=eval(input))
-    input=""
+    try:
+        display.config(text=eval(input))
+        input=""
+    except:
+        display.config(text="ERROR")
 
 buttons=[[0 for x in range(5)]for y in range(4)]
 for i in range(4):
@@ -46,6 +49,7 @@ for i in range(4):
 buttons[0][4].config(command=clear)
 buttons[3][0].config(command=equals)
 
+#temporary solution
 buttons[0][0].config(command=lambda: clicked("0"))
 buttons[1][0].config(command=lambda: clicked("."))
 buttons[2][0].config(command=lambda: clicked("%"))
