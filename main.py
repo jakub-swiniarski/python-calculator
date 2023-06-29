@@ -52,7 +52,7 @@ buttons[3][0].config(command=equals)
 #temporary solution
 buttons[0][0].config(command=lambda: clicked("0"))
 buttons[1][0].config(command=lambda: clicked("."))
-buttons[2][0].config(command=lambda: clicked("%"))
+buttons[2][0].config(command=lambda: clicked("*0.01"))
 
 buttons[0][1].config(command=lambda: clicked("1"))
 buttons[1][1].config(command=lambda: clicked("2"))
