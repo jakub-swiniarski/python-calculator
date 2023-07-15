@@ -1,4 +1,4 @@
 # Tkinter calculator
 ## How to use? 
-Download the executable file: **dist/main/main** and run it. <br/>
+Download the **dist/main** directory and run the **main** file. <br/>
 That's it!
