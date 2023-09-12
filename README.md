@@ -5,4 +5,5 @@
 - Find the latest release.
 - Download and unzip python-calculator.zip.
 - Execute the **main** file. <br/>
+
 **The provided executable only works on Linux.**
