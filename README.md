@@ -1,6 +1,6 @@
 # Tkinter calculator
 ## A simple GUI calculator written in Python
-## How to use?
+## How to run it?
 - Go to releases.
 - Find the latest release.
 - Download and unzip python-calculator.zip.
