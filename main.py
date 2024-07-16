@@ -30,10 +30,12 @@ def clear():
     display.config(text = "")
 
 def equals():
+    global input
     try:
-        clear();
+        display.config(text=eval(input))
+        input=""
     except:
-        display.config(text = "ERROR")
+        display.config(text="ERROR")
 
 
 def main():
@@ -41,7 +43,7 @@ def main():
         ["0", "1", "4", "7", "C"],
         [".", "2", "5", "8", "("],
         ["%", "3", "6", "9", ")"],
-        ["=", "+", "-", "×", "÷"]
+        ["=", "+", "-", "*", "÷"]
     ]
 
     buttons = [[0 for x in range(5)] for y in range(4)]
@@ -58,8 +60,9 @@ def main():
             )
             buttons[i][j].place(x = 10 + i * 78, y = 400 - (j + 1) * 60)
 
-    buttons[0][4].config(command=clear)
-    buttons[3][0].config(command=equals)
+    buttons[2][0].config(command = lambda: clicked("*0.01"))
+    buttons[0][4].config(command = clear)
+    buttons[3][0].config(command = equals)
 
     window.mainloop()
 
