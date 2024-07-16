@@ -1,7 +1,7 @@
 import tkinter as tk
 
-window       =tk.Tk()
-window.title ="Calculator"
+window       = tk.Tk()
+window.title = "Calculator"
 window.geometry("300x400")
 window.configure(bg = "#303030")
 window.resizable(False, False)
